@@ -5,4 +5,4 @@ RUN apk add --no-cache tcpdump
 VOLUME /var/tftpboot
 EXPOSE 69/udp
 ENTRYPOINT ["in.tftpd"]
-CMD ["-L", "-c", "-v", "-u", "root", "--secure", "/var/tftpboot"]
+CMD ["-L", "-c", "-v", "-u", "root", "-p", "--secure", "/var/tftpboot"]
