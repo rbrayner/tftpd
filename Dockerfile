@@ -7,4 +7,4 @@ RUN mkdir /tftpboot
 RUN chmod 777 /tftpboot
 EXPOSE 69/udp
 ENTRYPOINT ["in.tftpd"]
-CMD ["-L", "-c", "-v", "--secure", "/tftpboot"]
+CMD ["-L", "-c", "--blocksize", "1468", "-v", "--secure", "/tftpboot"]
