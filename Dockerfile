@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 
-RUN apt-get update && apt-get upgrade -y && apt-get install -y install xinetd tftpd tftp
+RUN apt-get update && apt-get upgrade -y && apt-get install -y xinetd tftpd tftp
 
 RUN sudo mkdir /tftpboot
 RUN sudo chmod -R 777 /tftpboot
