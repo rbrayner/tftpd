@@ -2,6 +2,8 @@ FROM ubuntu:latest
 
 RUN apt-get update && apt-get upgrade -y && apt-get install -y xinetd tftpd tftp
 
+COPY tftp /etc/xinetd.d/
+
 RUN sudo mkdir /tftpboot
 RUN sudo chmod -R 777 /tftpboot
 RUN sudo chown -R nobody /tftpboot
